@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #121212;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url('gorizont.gif');
+    background-size: cover; /* Обрезает или растягивает фон, чтобы заполнить весь экран */
+    background-repeat: no-repeat; /* Предотвращает повторение GIF */
+    background-position: center; /* Центрирует фон */
+  }
+
+  .profile {
+    margin-top: 20px;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    border: 2px solid #fff;
+  }
+  
+  .nickname {
+    font-size: 1.5em;
+    margin-top: 10px;
+  }
+  
+  .verified {
+    color: #1DA1F2;
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 20px;
+  
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    gap: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    max-width: 350px; /* Ограничивает ширину кнопки на больших экранах */
+    margin: 0 auto; /* Центрирует кнопку */
+    opacity: 0; /* Начальная прозрачность */
+    transform: translateY(50px); /* Начальное смещение вниз */
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Плавный переход */
+  }
+  
+  .button img {
+    width: 24px;
+    height: 24px;
+    transition: filter 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .button:hover img {
+    filter: invert(1);
+  }
+  
+  footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    color: #bbb;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg'); /* Путь к изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  p {
+    padding-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5em;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center; /* Центрирует кнопки по горизонтали */
+    gap: 20px; /* Расстояние между кнопками */
+    margin-top: 25px; /* Отступ сверху */
+  }
+  
+  .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Ширина кнопки */
+    height: 25px; /* Высота кнопки */
+    transition: transform 0.2s; /* Плавный переход для увеличения */
+  }
+  
+  .social-button img {
+    width: 100%; /* Заставляет изображение занимать всю кнопку */
+    height: auto; /* Поддерживает соотношение сторон */
+  }
+  
+  .social-button:hover {
+    transform: scale(1.1); /* Увеличивает кнопку при наведении */
+  }
+  
+  h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 20px;
+  }
+  
+  .verified-icon {
+    width: 18px; /* Ширина кнопки */
+    height: 18px;
+  }
+  
+  .social-links .button:nth-child(1) {
+    transition-delay: 0.1s; /* Задержка для первой кнопки */
+  }
+  .social-links .button:nth-child(2) {
+    transition-delay: 0.2s; /* Задержка для второй кнопки */
+  }
+  .social-links .button:nth-child(3) {
+    transition-delay: 0.3s; /* Задержка для третьей кнопки */
+  }
+  
+  .button.show {
+    transform: translateY(0); /* Конечное положение */
+    opacity: 1; /* Полная видимость */
+  }
+  
+  .footer-button {
+    color: #bbb; /* Белый цвет текста */
+    text-decoration: none; /* Убирает подчёркивание */
+  }
+  .video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Отправляем видео на задний план */
+  }
+  
+  /* Стили для видео */
+  .video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обеспечивает заполнение экрана */
+  }
+
+  /* Стиль для контента */
+  .content {
+    position: relative;
+    z-index: 1; /* Размещает контент поверх видео */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+@media (max-width: 768px) {
+    /* Скрываем горизонтальное видео */
+    .desktop-video {
+        display: none;
+    }
+
+    /* Стиль для вертикального видео */
+    .mobile-video {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+}
