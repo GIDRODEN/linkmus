@@ -1,0 +1,205 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+/* Фон */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('cover.jpg') no-repeat center center/cover;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+/* Центральное окно */
+.main-container {
+  width: 360px;
+  background: #e0e0e0; /* Светло-серый фон */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Обложка */
+.snippet-cover img {
+  width: 100%;
+  height: auto;
+}
+
+/* Информация о треке */
+.track-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.text-content h1 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.text-content p {
+  font-size: 1rem;
+  color: #505050;
+}
+
+/* Соцсети */
+.socials-container {
+  position: relative; /* Контейнер для правильного позиционирования */
+}
+
+.socials-button {
+  width: 50px;
+  height: 50px;
+  background: #c3c3c3; 
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.socials-menu {
+  position: absolute;
+  top: 50%;
+  right: 0; /* Выравниваем правый край меню с правым краем кнопки */
+  transform: translateY(-50%) scaleX(0); /* Прячем меню */
+  transform-origin: center right;
+  background: #c3c3c3;
+  border-radius: 30px;
+  padding: 5px 60px 5px 15px; /* Увеличиваем правый отступ, минимизируем левый */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+}
+/* Когда кнопка нажата */
+.socials-menu.active {
+  transform: translateY(-50%) scaleX(1); /* Показываем меню */
+  opacity: 1;
+}
+
+.socials-menu img {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+
+/* Платформы */
+.platforms {
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.platform {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.separator {
+  height: 1px;
+  background: #c3c3c3; /* Сделаем линию темнее */
+  margin: 10px 0; /* Увеличим отступы между блоками */
+}
+
+.listen-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: #ff0000; /* Красный цвет кнопок */
+  cursor: pointer;
+}
+
+.socials-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.socials-button .material-icons {
+  font-size: 30px; /* Установим размер иконки */
+  color: #535353; /* Цвет иконки */
+}
+
+.platform img  {
+  width: 30px;
+  height: 30px;
+}
+
+.social-link img {
+  width: 40px; /* Устанавливаем размер иконок */
+  height: 40px;
+  margin-right: 10px; /* Добавляем отступ между иконками */
+}
+
+.socials-container img {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+}
+
+/* Платформа */
+.platform {
+  display: flex;
+  align-items: center; /* Выравниваем элементы по вертикали */
+  justify-content: space-between; /* Элементы занимают доступное пространство */
+  margin-bottom: 10px; /* Отступ между платформами */
+}
+
+/* Иконка платформы */
+.platform img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Название платформы */
+.platform-name {
+  margin-left: 10px; /* Отступ между иконкой и названием */
+  font-size: 1rem;
+  color: #333; /* Цвет текста */
+  flex-grow: 1; /* Название займет оставшееся место */
+  text-align: left; /* Выравниваем текст по левому краю */
+}
+
+/* Кнопка "Слушать" */
+.listen-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: #ff0000; /* Красный цвет кнопки */
+  cursor: pointer;
+}
+
+.platform-name {
+  margin-left: 10px; /* Отступ между иконкой и названием */
+  font-size: 1rem;
+  color: #333; /* Цвет текста */
+}
+
+.platforms a {
+  text-decoration: none;
+}
