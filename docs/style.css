@@ -203,3 +203,19 @@ body {
 .platforms a {
   text-decoration: none;
 }
+
+#track-title {
+  transition: transform 0.3s ease-in-out;
+  display: inline-block; /* Чтобы можно было анимировать transform */
+  transform-origin: left; /* Устанавливаем точку трансформации на левый край */
+}
+
+/* Сжатое состояние текста */
+.shrink {
+  transform: scaleX(0.6); /* Уменьшаем ширину текста на 50% */
+}
+
+/* Полное состояние текста */
+.expand {
+  transform: scaleX(1); /* Возвращаем ширину текста к 100% */
+}
